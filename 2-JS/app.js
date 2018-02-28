@@ -1,6 +1,11 @@
 const url = 'https://restcountries.eu/rest/v2/name/';
 const countriesList = $('#countriesList');
-const filter = '?fields=name;capital;currencies'
+const filter = '?fields=name;capital;currencies';
+
+$('#country-name')[0].addEventListener("keyup", function(event) {
+	event.preventDefault();
+	searchCountries();
+});
 $('.search__btn').click(searchCountries);
 
 // User country - empty input value
@@ -15,7 +20,6 @@ function searchCountries() {
 	let countryName = $('#country-name').val();
 	if (!countryName.length) countryName = userCountry;
 
-	// jQuery shorthand GET request 
 	$.getJSON(url + countryName, showCountriesList);
 
 }
@@ -43,18 +47,20 @@ function showCountriesList(resp) {
 				$description.append('Description'),
 				$table.append(
 					$head.append($trh),
-					$body.append($trb),
-				),
+					$body.append($trb)
+				)
 			)
 		);
 		// Add data to table
 		const data = ['capital', 'population', 'region'];
-		data.forEach(function(item2) {
-			let $th = $('<th>').addClass('table__item'),
-				$td = $('<td>').addClass('table__item');
 
-			$trh.append($th.append(item2));
-			$trb.append($td.append(item[item2]));
+		data.forEach(function(item2) {
+			const $th = $('<th>').addClass('table__item'),
+				$td = $('<td>').addClass('table__item');
+			if (item[item2]) {
+				$trh.append($th.append(item2));
+				$trb.append($td.append(item[item2]));
+			}
 		});
-	})
+	});
 }

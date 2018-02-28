@@ -1,0 +1,50 @@
+// search
+.search
+	background: #e5e5e5
+	padding-bottom: 20px
+
+// list
+.list
+	+e(item)
+		display: flex
+		flex-flow: row wrap
+		margin-bottom: 15px
+		padding: 10px
+		background: #7f7f7f
+	+e(flag)
+		width: 30%
+		height: 100%
+	+e(name)
+		width: 70%
+		font-size: 3em
+		margin: auto
+		padding-left: 20px
+	+e(description)
+		width: 100%
+
+// table
+.table
+	display: flex
+	overflow: auto
+	position: relative
+	width: 100%
+	font-size: 1.2em
+	+e(head)
+		text-align: left
+		text-transform: uppercase
+		border-right: 2px solid black
+		padding-right: 10px
+		background: #b2b2b2
+		position: sticky
+		left: 0
+		max-width: 50%
+		z-index: 1
+	+e(body)
+		flex: 1
+		background: #999999
+		padding: 0 10px
+		right: 0
+		position: relative
+	+e(row)
+		display: flex
+		flex-flow: column nowrap
