@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.list__item {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.list__flag {
+  width: 30%;
+}
+
+.list__name {
+  width: 70%;
+  font-size: 50px;
+  margin: auto;
+  padding-left: 20px;
+}
+
+.list__description {
+  width: 100%;
+}
+
+.table {
+  background: blue;
+  padding: 10px;
+  display: flex;
+}
+
+.table__head {
+  text-align: left;
+  border-right: 2px solid black;
+  padding-right: 10px;
+  background: orange;
+}
+
+.table__body {
+  background: yellow;
+  padding: 0 10px;
+}
+
+.table__row {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/*# sourceMappingURL=app.css.map */

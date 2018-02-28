@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "base.css",
+	"sources": [
+		"../1-SASS/base.sass"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,CAAC,CAAC;EACD,UAAU,EAAE,UAAU;EACtB,MAAM,EAAE,eAAe;CAAI"
+}
